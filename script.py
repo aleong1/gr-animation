@@ -78,7 +78,7 @@ def run(filename):
     if p:
         (commands, symbols) = p
     else:
-        print "Parsing failed."
+        print ("Parsing failed.")
         return
 
     view = [0,
@@ -118,7 +118,7 @@ def run(filename):
     coords1 = []
 
     for command in commands:
-        print command
+        print (command)
         c = command['op']
         args = command['args']
         knob_value = 1
