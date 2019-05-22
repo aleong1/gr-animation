@@ -22,6 +22,27 @@ def first_pass( commands ):
 
     name = ''
     num_frames = 1
+    coms = set()
+
+    for command in commands:
+        c = command['op']
+        args = command['args']
+        
+        if c == "frames":
+            num_frames = args
+        elif c == "basename":
+            name = args
+        coms.add(c)
+    
+    if "vary" in coms:
+        if "frames" not in coms:
+            #exit
+
+    if "frames" in coms:
+        if "basename" not in coms:
+            name = "boring_name"
+            print ("Had to use default name: boring_name")
+    
 
     return (name, num_frames)
 
