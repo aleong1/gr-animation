@@ -1,4 +1,5 @@
 import mdl
+import sys
 from display import *
 from matrix import *
 from draw import *
@@ -36,7 +37,7 @@ def first_pass( commands ):
     
     if "vary" in coms:
         if "frames" not in coms:
-            #exit
+            sys.exit(0)
 
     if "frames" in coms:
         if "basename" not in coms:
