@@ -28,13 +28,13 @@ def first_pass( commands ):
     for command in commands:
         c = command['op']
         args = command['args']
-        
+
         if c == "frames":
             num_frames = args
         elif c == "basename":
             name = args
         coms.add(c)
-    
+
     if "vary" in coms:
         if "frames" not in coms:
             sys.exit(0)
@@ -43,7 +43,7 @@ def first_pass( commands ):
         if "basename" not in coms:
             name = "boring_name"
             print ("Had to use default name: boring_name")
-    
+
 
     return (name, num_frames)
 
@@ -66,6 +66,8 @@ def first_pass( commands ):
   ===================="""
 def second_pass( commands, num_frames ):
     frames = [ {} for i in range(num_frames) ]
+    knobs = dictionary()
+    
 
     return frames
 
